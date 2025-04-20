@@ -33,7 +33,7 @@ export default function Contact() {
           <p>
             GitHub:{" "}
             <a
-              href="https://github.com/YOUR_USERNAME"
+              href="https://https://github.com/BeasBishnu"
               target="_blank"
               rel="noopener noreferrer"
             >
