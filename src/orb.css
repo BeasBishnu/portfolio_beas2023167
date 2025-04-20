@@ -1,0 +1,89 @@
+.orb-container {
+  position: fixed;
+  bottom: 15.3rem;
+  right: 11.2rem;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #9e6bd4, #3a1756);
+  /* Change the outer glow to yellow */
+  box-shadow: 0 0 30px 12px rgba(255, 251, 153, 0.6);
+  cursor: pointer;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: float 4s ease-in-out infinite;
+}
+
+.orb-glow {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  /* inner glow goes from a soft yellow to transparent */
+    background: radial-gradient(circle, rgba(255, 251, 153, 0.5), transparent 60%);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    /* Bright yellow outer glow */
+    box-shadow: 0 0 30px rgba(255, 251, 153, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 60px rgba(255, 251, 153, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 30px rgba(255, 251, 153, 0.5);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.orb-tooltip {
+  position: absolute;
+  bottom: 80px;
+  right: 0;
+  background: rgba(24, 17, 32, 0.95);
+  color: white;
+  padding: 1rem;
+  border-radius: 12px;
+  width: 240px;
+  font-family: "Cinzel", serif;
+  font-size: 0.75rem;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(158, 107, 212, 0.5);
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  z-index: 2000;
+}
+
+.orb-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.dot {
+  height: 8px;
+  width: 8px;
+  margin: 0 4px;
+  background-color: #ccc;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: #9e6bd4;
+}

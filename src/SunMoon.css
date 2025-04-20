@@ -1,0 +1,54 @@
+.sunmoon-container {
+  position: fixed;
+  left: 9rem; /* Adjust this for horizontal position */
+  top: 41%; /* Adjust this for vertical position */
+  width: 120px; /* Increased size */
+  height: 120px; /* Increased size */
+  z-index: 1000;
+  transition: transform 1s ease-in-out;
+}
+
+.sunmoon-container.day {
+  animation: shimmer 2s infinite ease-in-out;
+}
+
+.sunmoon-container.night {
+  animation: shimmer-night 2s infinite ease-in-out;
+}
+
+.sunmoon-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.1) rotate(180deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+    opacity: 0.8;
+  }
+}
+
+@keyframes shimmer-night {
+  0% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.05) rotate(180deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+    opacity: 0.6;
+  }
+}
