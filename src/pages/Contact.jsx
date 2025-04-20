@@ -37,7 +37,7 @@ export default function Contact() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              github.com/YOUR_USERNAME
+              https://github.com/BeasBishnu
             </a>
           </p>
           <p className="reach-out">
